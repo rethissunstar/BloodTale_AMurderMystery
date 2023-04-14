@@ -1,0 +1,29 @@
+/* this is for the main splash page that will persist */
+header{
+   background-color: black;
+   display: flex;
+   
+
+   
+}
+
+.help{
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Rubik Wet Paint', cursive;
+    justify-content: end;
+    color: gold;
+}
+.title{
+    font-family: 'Rubik Wet Paint', cursive;
+    color: #8b0000;
+    font-size: 40pt;
+}
+body{
+    background-color: black;
+}
+img{
+    
+    width: 100%;
+}
