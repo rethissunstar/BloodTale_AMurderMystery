@@ -30,7 +30,7 @@ header{
     background-image: url(./phone9111.PNG);
     background-position: center;
     background-repeat: no-repeat;
-    height: 1000px;
+    height: 900px;
     /* background-attachment: fixed;
    padding: 50px;
    
@@ -38,6 +38,12 @@ header{
    background-repeat: no-repeat;
    margin-right: 0%; */
    
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
 }
 
  img{
