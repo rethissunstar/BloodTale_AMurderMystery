@@ -28,10 +28,16 @@ header{
  }
 .blank{
     background-image: url(./phone9111.PNG);
-    background-size: 98%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    /* background-attachment: fixed;
    padding: 50px;
-   width: 400px;
-   height: 760px;
+   
+   background-position:right;
+   background-repeat: no-repeat;
+   margin-right: 0%; */
+   
 }
 
  img{
