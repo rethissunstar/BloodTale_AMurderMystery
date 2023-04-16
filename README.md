@@ -60,3 +60,8 @@ $('#messages').chatBubble({
 ## Resources
 https://www.jqueryscript.net/text/jQuery-Plugin-To-Create-Pretty-Chat-Bubbles-chatbubble-js.html#google_vignette
 written by Quadrophone
+
+Images for phone and the comic book style image are created by Christopher Rodrigues
+https://github.com/rethissunstar
+
+Fonts from Google Font's API
