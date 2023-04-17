@@ -89,3 +89,15 @@ body{
     }
 }
 
+
+.kName{
+    
+    opacity: 0;
+
+}
+
+.kName.activeInfo{
+    
+    opacity: 1;
+
+}

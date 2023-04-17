@@ -12,6 +12,7 @@
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     
     <link rel="stylesheet" href="./assets/jquery.chatbubble.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/style.css">
     <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 
     
@@ -19,7 +20,14 @@
 
     <title>Help Me</title>
 </head>
+
 <body>
+
+    <audio autoplay loop>
+        <source src="./assets/dark-mystery-trailer-taking-our-time-131566.mp3" type="audio/mp3">
+    </audio>
+     
+
     <header>
         
             <section class="title">
@@ -27,12 +35,13 @@
             </section>    
             <section class="help">
                 Help!   
-            </section>
-            
+            </section>           
             
         
     </header>
+
     <!-- /* this is the phone placement and messages code */ -->
+
     <section class = "phone">
         
     </section>
@@ -41,22 +50,34 @@
             <style>
                 ul{
                     position: relative;
-                   margin-top: 300px; /* I dont want this but this was the only position I could use. */
+                    margin-top: 300px; /* I dont want this but this was the only position I could use. */
                 }
             </style>
             <ul id="messages">
 
             </ul>
+
+            <div class="kName">
+
+             <input type="text">
+
+            </div>
+
             <script>
     
-                var messages = ['Hi, this is my first message', 'Hello, this is my second message', 'Message message message']
+                var messages = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?",]
                
                 $('#messages').chatBubble({
                     messages: messages,
-                    typingSpeed: 5000
+                    typingSpeed: 4000
                 });
+
+                // const kName = document.querySelector(".kName");                
+                // kName.classList.add("activeInfo");
             
-                </script>
+            </script>
+
+          
         </section>
         
         
