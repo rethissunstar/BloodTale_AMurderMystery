@@ -38,7 +38,12 @@
                 self.addMessage(self.element, messages[i], typingSpeed).then(function() {
                     window.setTimeout(function() {
                         i++;
-                        if (i < count) addMessage();
+                        if (i < count) {
+                            addMessage();
+                        } else{
+                            const kName = document.querySelector(".kName");                
+                            kName.classList.add("activeInfo");
+                        }
                     },delay);
                 });
             }
