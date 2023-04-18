@@ -1,0 +1,110 @@
+/* this is for the main splash page that will persist */
+header{
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    
+ 
+    
+ }
+ 
+ .help{
+     list-style-type: none;
+     display: flex;
+     align-items: flex-end;
+     font-family: 'Rubik Wet Paint', cursive;
+     justify-content: end;
+     color: gold;
+     font-size: 60pt;
+ }
+ .title{
+     font-family: 'Rubik Wet Paint', cursive;
+     color: #8b0000;
+     font-size: 80pt;
+ }
+ body{
+     background-color: black;
+     
+ }
+.blank{
+    background-image: url(phone9111.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px;
+    /* background-attachment: fixed;
+   padding: 50px;
+   
+   background-position:right;
+   background-repeat: no-repeat;
+   margin-right: 0%; */
+   
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
+}
+
+ img{
+     animation: fadeIn 5s;
+     width: 100%;
+ }
+ 
+ @keyframes fadeIn {
+     0% {opacity: 0;}
+     100% {opacity:1;}
+ }
+ #second{
+     color: gold;
+     display: flex;
+     align-items: end;
+     justify-content: end;
+     padding-right: 30%;
+     
+ 
+ }
+ 
+ .btn{
+     background-color: transparent;
+     color: #8b0000;
+     height: 200px;
+     width: 300px;
+     font-family:'Rubik Wet Paint', cursive;
+     font-size: 30pt;
+     display: flex;
+     align-items: center;
+     justify-items: center;
+     justify-content: space-around;
+     align-content: center;
+     position: relative;
+ }
+ 
+ body{
+     /* background-color: black; */
+     
+ }   
+ 
+ @media screen and (max-width: 1425px){
+     body{
+         /* background-color: black; */
+       
+         
+     }  
+     .title{
+         font-family: 'Rubik Wet Paint', cursive;
+         color: #8b0000;
+         font-size: 40pt;
+     }
+     .help{
+         list-style-type: none;
+         display: flex;
+         align-items: flex-end;
+         font-family: 'Rubik Wet Paint', cursive;
+         justify-content: end;
+         color: gold;
+         font-size: 30pt;
+     }
+ }
+ 
+ 
