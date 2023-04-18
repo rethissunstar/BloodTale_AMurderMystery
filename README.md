@@ -65,3 +65,6 @@ Images for phone and the comic book style image are created by Christopher Rodri
 https://github.com/rethissunstar
 
 Fonts from Google Font's API
+
+https://github.com/rethissunstar/BloodTale_AMurderMystery.git
+
