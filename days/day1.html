@@ -66,12 +66,15 @@
             <script>
     
                 var messages = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?".link("./day1_puzzle.html"),]
-               
+               function messageGen(){
                 $('#messages').chatBubble({
                     messages: messages,
                     typingSpeed: 4000
                 });
-
+            }
+            //function call
+            messages = ['testing messages', 'you know we can','testing link'.link("day1_puzzle.html")]
+            messageGen();
                 // const kName = document.querySelector(".kName");                
                 // kName.classList.add("activeInfo");
             
