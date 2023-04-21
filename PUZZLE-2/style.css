@@ -41,12 +41,12 @@ section#hangman {
 
 .man_head {
     background: #000066;
-    width: 67px;
-    height: 106px;
+    width: 77px;
+    height: 116px;
     position: relative;
-    left: 95px;
-    bottom: 150px;
-    background-image: url(../PUZZLE-2/images/png-transparent-stick-man-blue-figure-person-stickman-stick-figure-matchstick-man.png);
+    left: 97px;
+    bottom: 159px;
+    background-image: url(../PUZZLE-2/images/horrorrenditionofstickman.png);
     background-size: cover;
 }
 /* this was part of the original code i left in */
