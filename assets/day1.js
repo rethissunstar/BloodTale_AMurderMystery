@@ -161,3 +161,20 @@ function showMobile() {
     });
 }
 
+let headEl = document.getElementsByClassName(".thisHead");
+
+var realtime = dayjs().hour + ':' + dayjs().min + ':' +dayjs().second;
+    console.log(realtime);
+
+
+setInterval((function(event){
+
+    
+
+    
+    
+    headEl.appendChild(realtime);
+})
+    
+, 1000);
+
