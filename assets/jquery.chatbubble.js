@@ -40,15 +40,13 @@
                         i++;
                         if (i < count) {
                             addMessage();
-                        } else{
-                            const kName = document.querySelector(".kName");                
-                            kName.classList.add("activeInfo");
                         }
-                    },delay);
+                    }, delay);
+
                 });
             }
-
             addMessage();
+
         },
 
         addMessage: function(el, message, typingSpeed) {
@@ -69,8 +67,9 @@
                     $bubble.html(message).removeClass('typing');
                     resolve(true);
                 },speed);
-            
+
             });
+
         }
     };
 

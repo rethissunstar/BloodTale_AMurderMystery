@@ -11,18 +11,30 @@ let questions = [
     "3. Burlington",
     "4. Richmond"
   ]
-}
-//   {
-//   numb: 2,
-//   question: "The condition in an if/else statement is enclosed with ________.",
-//   answer: "3. parenthesis",
-//   options: [
-//     "1. quotes",
-//     "2. curly brackets",
-//     "3. parenthesis",
-//     "4. square brackets"
-//   ]
-// }
+},
+   {
+   numb: 2,
+   question: "Question second day.",
+   answer: "2. Second answer.",
+   options: [
+     "1. First answer.",
+     "2. Second answer.",
+     "3. Third answer.",
+     "4. Fourth answer."
+   ]
+},
+   {
+   numb: 3,
+   question: "Question third day.",
+   answer: "3. Third answer.",
+   options: [
+     "1. First answer.",
+     "2. Second answer.",
+     "3. Third answer.",
+     "4. Fourth answer."
+   ]
+},
 
 ];
+
 
