@@ -93,8 +93,71 @@ ul{
          font-size: 30pt;
      }
  }
- 
 
+
+.warning_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 650px;
+    height: 470px;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid rgb(134, 122, 122);
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.warning_box.activeWarning{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+h1 {
+    margin-top: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+.warning_box footer button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.warning_box footer button:hover {
+    background: #0263ca;
+}
+
+.warning_box footer button.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
 
 
  /* General CSS Properties */
@@ -276,10 +339,10 @@ ul{
 
 
 .quiz_box footer button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
     padding: 0 13px;
     font-size: 18px;
     font-weight: 400;
@@ -334,33 +397,45 @@ ul{
     pointer-events: auto;
 }
 
+.mobile_box footer button {
+    display: block;
+    float: right;
+    margin-right: 25px;
+    margin-top: 7px;
+    height: 30px;
+    width:327px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 30px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.mobile_box footer button:hover {
+    background: #0263ca;
+}
+
+.mobile_box footer button.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
 
 
 /* Media Queries */
 @media (max-width: 870px) {
-    .info_box {
-        width: 650px;
-        height: 310px;
-    }
 
-    .info_box h1 {
-        margin: auto;
-        text-align: center;
-        padding: 20px;
-        font-size: 21px;
-    }
-
-    .info_box p {
-        font-size: 15px;
-        text-align: center;
-    }
-
-
-    .info-title {
-        font-size: 12px;
-    }
-
-    .buttons button.restart, button.start, button.submit, button.quit, button.reset {
+    .buttons button.next_btn {
         margin: 0 3px;
         height: 30px;
         width: 130px;
@@ -400,101 +475,5 @@ ul{
         background: white;
     }
 
-    section{
-        padding: 20px 0px 17px 0px;
-    }
-
-    section .que_text{
-        font-size: 15px;
-        font-weight: 500;
-    }
-
-    section .option_list{
-        padding: 15px 0px 10px 10px;
-        width: 280px;
-        margin-left: 170px;
-   
-    }
-
-    section .option_list .option{
-        padding: 6px 11px;
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-
-    footer {
-        height: 40px;
-        padding: 0 20px;
-        padding-top: 15px;
-    }
-
-    footer .total_que span{
-        font-size: 12px;
-
-    }
-
-    footer .total_que span p:first-child{
-        font-size: 12px;
-    }
-
-
-    footer .total_que span p{
-        font-weight: 400;
-        font-size: 12px;
-    }
-
-
-    footer .qtn_answer_correct{
-        height: 20px;
-        font-size: 12px;
-
-    }
-
-    footer .qtn_answer_wrong{
-        height: 20px;
-        font-size: 12px;
-
-    }
-
-    .result_box,
-    .score_box {
-        padding: 10px 10px;
-        width: 380px;
-        font-size: 16px;
-    }
-
-    .result_box {
-        height: 280px;
-    }
-
-
-
-    .result_box .complete_text{
-        font-size: 16px;
-
-    }
-
-    .result_box .score_text span{
-        margin: 5px 0;
-        font-size: 16px;
-    }
-
-    .result_box .score_text span p{
-        padding: 0 4px;
-        font-weight: 600;
-        font-size: 16px;
-
-    }
-
-    .result_box .text {
-        border: 1px;
-        font-size: 14px;
-        color: black;
-        border-style: solid;
-        height: 18px;
-        padding-left: 7px;
-        width: 80px;
-        border-color: blue;
-    }
 
 }

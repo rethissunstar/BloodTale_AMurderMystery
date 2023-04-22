@@ -1,18 +1,86 @@
 //selecting all required elements
+const warning_box = document.querySelector(".warning_box");
 const quiz_box = document.querySelector(".quiz_box");
 const mobile_box = document.querySelector(".mobile_box");
 const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
+let dayAnswers = [];
+const today = "04/24/2023";
+let qAnswer = "";
+let dALenght = 0;
+let lDStoraged = "";
+let d = 1;
+
 
 window.onload = function () {
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    showQuetions(0); //calling showQestions function
-    queCounter(1); //passing 1 parameter to queCounter
-    startTimer(74); //calling startTimer function
-    startTimerLine(0); //calling startTimerLine function
+    adayTest();
 }
+
+const exit_btn_Warning = document.querySelector("footer .exit_btn_Warning");
+const clear_btn_Warning = document.querySelector("footer .clear_btn_Warning");
+
+
+function adayTest() {
+    dayAnswers = JSON.parse(localStorage.getItem("dAnsFile")); //check if there is a file named cName on the local drive, if yes is going to load on the variable cityList
+
+    if (dayAnswers !== null) {
+        dALenght = dayAnswers.length;
+        lDStoraged = dayAnswers[dALenght - 2];
+        if (dALenght > 4) {
+            warning_box.classList.add("activeWarning"); //show warning box
+            let demo1 = "You've had your chance for three days.";
+            let demo2 = "Thank you for participating in the bloody tale game.";
+            let demo3 = dayAnswers;
+            document.getElementById("demo1").innerHTML = demo1;
+            document.getElementById("demo2").innerHTML = demo2;
+            document.getElementById("demo3").innerHTML = demo3;
+            exit_btn_Warning.classList.add("show"); //show exit button box
+            clear_btn_Warning.classList.add("show"); //show exit button box
+        } else if (lDStoraged == today) {
+            warning_box.classList.add("activeWarning"); //show warning box
+            let demo1 = "You've had your chance today.";
+            let demo2 = "Please try again in the next few days.";
+            let demo3 = dayAnswers;
+            document.getElementById("demo1").innerHTML = demo1;
+            document.getElementById("demo2").innerHTML = demo2;
+            document.getElementById("demo3").innerHTML = demo3;
+            exit_btn_Warning.classList.add("show"); //show exit button box
+        } else {
+            d = (dALenght / 2) + 1
+            quiz_box.classList.add("activeQuiz"); //show quiz box
+            showQuetions(); //calling showQestions function
+            queCounter(1); //passing 1 parameter to queCounter
+            startTimer(74); //calling startTimer function
+            startTimerLine(0); //calling startTimerLine function
+        }
+        
+    } else {
+        dayAnswers = [];
+        quiz_box.classList.add("activeQuiz"); //show quiz box
+        showQuetions(); //calling showQestions function
+        queCounter(1); //passing 1 parameter to queCounter
+        startTimer(74); //calling startTimer function
+        startTimerLine(0); //calling startTimerLine function
+    }
+}
+
+
+
+
+
+// if Next Que button clicked
+exit_btn_Warning.onclick = () => {
+    window.close();
+}
+
+
+clear_btn_Warning.onclick = () => {
+    localStorage.removeItem("dAnsFile");
+    window.close();
+}
+
 
 
 // if startQuiz button clicked
@@ -24,29 +92,17 @@ window.onload = function () {
 let timeValue = 74;
 let que_count = 0;
 let que_numb = 1;
-let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
 
-
-// if restartQuiz button clicked
-
-// if quitQuiz button clicked
-
-const next_btn = document.querySelector("footer .next_btn");
+const next_btn_Quiz = document.querySelector("footer .next_btn_Quiz");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// if Next Que button clicked
-next_btn.onclick = () => {
-        clearInterval(counter); //clear counter
-        clearInterval(counterLine); //clear counterLine
-        showMobile(); //calling showResult function
-}
-
 // getting questions and options from array
-function showQuetions(index) {
+function showQuetions() {
     const que_text = document.querySelector(".que_text");
+    let index = d - 1;
 
     //creating a new span and div tag for question and option and passing the value using array index
     let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
@@ -64,6 +120,7 @@ function showQuetions(index) {
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
+
 // creating the new div tags which for icons
 let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
@@ -73,16 +130,16 @@ function optionSelected(answer) {
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
-    let correcAns = questions[que_count].answer; //getting correct answer from array
+    let correcAns = questions[d-1].answer; //getting correct answer from array
     const allOptions = option_list.children.length; //getting all option items
 
     if (userAns == correcAns) { //if user selected option is equal to array's correct answer
-        userScore += 1; //upgrading score value with 1
+        qAnswer = "C";
         answer.classList.add("correct"); //adding green color to correct selected option
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
-        console.log("Your correct answers = " + userScore);
     } else {
+        qAnswer = "W";
         answer.classList.add("incorrect"); //adding red color to correct selected option
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
         console.log("Wrong Answer");
@@ -98,7 +155,10 @@ function optionSelected(answer) {
     for (i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
-    next_btn.classList.add("show"); //show the next button if user selected any option
+
+    dayAnswers.push(today,qAnswer);
+    localStorage.setItem("dAnsFile", JSON.stringify(dayAnswers));
+    next_btn_Quiz.classList.add("show"); //show the next button if user selected any option
 }
 
 
@@ -113,6 +173,9 @@ function startTimer(time) {
         }
         if (time < 0) { //if timer is less than 0
             clearInterval(counter); //clear counter
+            qAnswer = "W";
+            dayAnswers.push(today, qAnswer);
+            localStorage.setItem("dAnsFile", JSON.stringify(dayAnswers));
             timeText.textContent = "Time Off"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
             let correcAns = questions[que_count].answer; //getting correct answer from array
@@ -126,13 +189,21 @@ function startTimer(time) {
             for (i = 0; i < allOptions; i++) {
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
             }
-            next_btn.classList.add("show"); //show the next button if user selected any option
+            next_btn_Quiz.classList.add("show"); //show the next button if user selected any option
         }
     }
 }
 
-
-
+function startTimerLine(time) {
+    counterLine = setInterval(timer, 115);
+    function timer() {
+        time += 1; //upgrading time value with 1
+        time_line.style.width = time + "px"; //increasing width of time_line with px by time value
+        if (time > 648) { //if time value is greater than 847
+            clearInterval(counterLine); //clear counterLine
+        }
+    }
+}
 
 function queCounter(index) {
     //creating a new span tag and passing the question number and total question
@@ -141,32 +212,54 @@ function queCounter(index) {
 }
 
 
-var messages = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?",]
+// if Next Que button clicked
+next_btn_Quiz.onclick = () => {
+    clearInterval(counter); //clear counter
+    clearInterval(counterLine); //clear counterLine
+    showMobile(); //calling showResult function
+}
+
+
+var messages1 = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?",];
+var messages2 = ['Second day message 1.', 'Second day message 2.', 'Second day message 3.', 'Second day message 4.', "Do you know who I am?",];
+var messages3 = ['Third day message 1.', 'Third day message 2.', 'Third day message 3.', 'Third day message 4.', "Do you know who I am?",];
+var messagesd = [];
+
+
 
 function showMobile() {
+    if (d == 1) {
+        messagesd = messages1;
+    }
+
+    if (d == 2) {
+        messagesd = messages2;
+    }
+
+    if (d == 3) {
+        messagesd = messages3;
+    }
+
     quiz_box.classList.remove("activeQuiz"); //remove quiz box
     mobile_box.classList.add("activeMobile"); //show mobile box
 
     $('#messages').chatBubble({
-        messages: messages,
+        messages: messagesd,
         typingSpeed: 4000
     });
+    setTimeout(show_btn_Mobile, 10000);
 }
 
-let headEl = document.getElementsByClassName(".thisHead");
+function show_btn_Mobile() {
+    next_btn_Mobile.classList.add("show"); //show the next button if user selected any option
+}
 
-var realtime = dayjs().hour + ':' + dayjs().min + ':' +dayjs().second;
-    console.log(realtime);
+const next_btn_Mobile = document.querySelector("footer .next_btn_Mobile");
+
+// if Next Que button clicked
+next_btn_Mobile.onclick = () => {
+    window.close();
+}
 
 
-setInterval((function(event){
-
-    
-
-    
-    
-    headEl.appendChild(realtime);
-})
-    
-, 1000);
 

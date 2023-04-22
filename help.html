@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/jquery.chatbubble.min.css" type="text/css">
     <link rel="stylesheet" href="./assets/jquery.chatbubble.css" type="text/css">
     <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="./assets/jquery.chatbubble.min.js"></script>
+    <script src="./assets/jquery.chatbubble.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 
@@ -25,6 +25,31 @@
     <audio autoplay loop>
         <source src="./assets/dark-mystery-trailer-taking-our-time-131566.mp3" type="audio/mp3">
     </audio>
+
+    <header>
+
+        <section class="title">
+            BloodyTale
+        </section>
+        <section class="help">
+            Help!
+        </section>
+
+    </header>
+
+    <div class="warning_box">
+        <section>
+            <h1 id="demo1"></h1>
+            <h1 id="demo2"></h1>
+            <h1 id="demo3"></h1>
+        </section>
+
+        <footer>
+            <button class="exit_btn_Warning">Exit</button>
+            <button class="clear_btn_Warning">Clear history</button>
+        </footer>
+
+    </div>
 
 
     <!-- Quiz Box -->
@@ -47,21 +72,10 @@
 
         <!-- Footer of Quiz Box -->
         <footer>
-            <button class="next_btn">Next Window</button>
+            <button class="next_btn_Quiz">Next Window</button>
         </footer>
     </div>
 
-    <header>
-        
-            <section class="title">
-                BloodyTale                
-            </section>    
-            <section class="help">
-                Help!   
-            </section>           
-            
-        
-    </header>
 
 
     <section class="mobile_box">
@@ -74,12 +88,12 @@
         <ul id="messages">
         </ul>
 
+        <footer>
+            <button class="next_btn_Mobile">Next Window</button>
+        </footer>
+
     </section>
 
-
-    <section class="jquerystuff">
-        
-    </section>
 
     <!-- JavaScript file for Questions and Options only -->
     <script src="./assets/questions.js"></script>
