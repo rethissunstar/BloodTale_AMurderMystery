@@ -1,3 +1,18 @@
+var messages = ['Welcome to the tutorial, over the game you will be asked to answer questions and solve puzzles.  Much like the one you just answered.', 'Doing so will yield clues to solve who the killer is. When ready return to main by clicking on the title.',]
+
+function showMobile() {
+    quiz_box.classList.remove("activeQuiz"); //remove quiz box
+    mobile_box.classList.add("activeMobile"); //show mobile box
+
+    $('#messages').chatBubble({
+        messages: messages,
+        typingSpeed: 4000
+    });
+}
+
+
+
+
 //selecting all required elements
 const quiz_box = document.querySelector(".quiz_box");
 const mobile_box = document.querySelector(".mobile_box");
@@ -149,15 +164,4 @@ function queCounter(index) {
 }
 
 
-var messages = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?",]
-
-function showMobile() {
-    quiz_box.classList.remove("activeQuiz"); //remove quiz box
-    mobile_box.classList.add("activeMobile"); //show mobile box
-
-    $('#messages').chatBubble({
-        messages: messages,
-        typingSpeed: 4000
-    });
-}
 
