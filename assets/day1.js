@@ -7,7 +7,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 let dayAnswers = [];
-const today = "04/25/2023";
+const today = "04/23/2023";
 let qAnswer = "";
 let dALenght = 0;
 let lDStoraged = "";
@@ -31,7 +31,7 @@ function adayTest() {
         if (dALenght > 4) {
             warning_box.classList.add("activeWarning"); //show warning box
             let demo1 = "You've had your chance for three days.";
-            let demo2 = "Thank you for participating in the bloody tale game.";
+            let demo2 = "Thank you for participating in the Bloody Tale game.";
             let demo3 = dayAnswers;
             document.getElementById("demo1").innerHTML = demo1;
             document.getElementById("demo2").innerHTML = demo2;
@@ -41,7 +41,7 @@ function adayTest() {
         } else if (lDStoraged == today) {
             warning_box.classList.add("activeWarning"); //show warning box
             let demo1 = "You've had your chance today.";
-            let demo2 = "Please try again in the next few days.";
+            let demo2 = "Please try again tomorrow.";
             let demo3 = dayAnswers;
             document.getElementById("demo1").innerHTML = demo1;
             document.getElementById("demo2").innerHTML = demo2;
@@ -72,13 +72,13 @@ function adayTest() {
 
 // if Next Que button clicked
 exit_btn_Warning.onclick = () => {
-    window.close();
+    self.close();
 }
 
 
 clear_btn_Warning.onclick = () => {
     localStorage.removeItem("dAnsFile");
-    window.close();
+    self.close();
 }
 
 
@@ -221,8 +221,8 @@ next_btn_Quiz.onclick = () => {
 
 
 var messages1 = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?",];
-var messages2 = ['Second day message 1.', 'Second day message 2.', 'Second day message 3.', 'Second day message 4.', "Do you know who I am?",];
-var messages3 = ['Third day message 1.', 'Third day message 2.', 'Third day message 3.', 'Third day message 4.', "Do you know who I am?",];
+var messages2 = ['Hi, I used to spend the night with the dead bodies most of the time', 'My first murderer was a student from the University of Washington ', 'I used to spend the night with the dead bodies most of the time', "Do you know who I am?",];
+var messages3 = ['Hi, I attended law school in Utah.', 'Most of my crimes were commited on a classic 1968 Volkswagen Beetle.', 'The vehicle nowadays is on display at a museum. ', "Who am I?",];
 var messagesd = [];
 
 
@@ -258,5 +258,13 @@ const next_btn_Mobile = document.querySelector("footer .next_btn_Mobile");
 
 // if Next Que button clicked
 next_btn_Mobile.onclick = () => {
-    window.close();
+    mobile_box.classList.remove("activeMobile"); //show mobile box
+    warning_box.classList.add("activeWarning"); //show warning box
+    let demo1 = "You've had your chance today.";
+    let demo2 = "Please try again tomorrow.";
+    let demo3 = dayAnswers;
+    document.getElementById("demo1").innerHTML = demo1;
+    document.getElementById("demo2").innerHTML = demo2;
+    document.getElementById("demo3").innerHTML = demo3;
+    exit_btn_Warning.classList.add("show"); //show exit button box
 }
