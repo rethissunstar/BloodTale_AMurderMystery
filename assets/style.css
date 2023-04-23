@@ -62,14 +62,14 @@ img{
 
 body{
     /* background-color: black; */
-    background-image: url(./murderersplash.png);
-    background-size:cover;
+    /* background-image: url(./murderersplash.png); */
+    /* background-size:cover; */
 }   
 
 @media screen and (max-width: 1425px){
     body{
         /* background-color: black; */
-        background-image: url(./murderersplash.png);
+        
         background-size:auto;
         
     }  
