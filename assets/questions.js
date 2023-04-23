@@ -14,24 +14,24 @@ let questions = [
 },
    {
    numb: 2,
-   question: "Question second day.",
-   answer: "2. Second answer.",
+   question: "I have attended 5 universities.  Which university did I attend.",
+   answer: "1. University of Utah.",
    options: [
-     "1. First answer.",
-     "2. Second answer.",
-     "3. Third answer.",
-     "4. Fourth answer."
+     "1. University of Utah.",
+     "2. Princeton.",
+     "3. University of Pennsylvania.",
+     "4. University of Texas."
    ]
 },
    {
    numb: 3,
-   question: "Question third day.",
-   answer: "3. Third answer.",
+   question: "Who am I.",
+   answer: "2. Ted Bundy.",
    options: [
-     "1. First answer.",
-     "2. Second answer.",
-     "3. Third answer.",
-     "4. Fourth answer."
+     "1. Ed Gein.",
+     "2. Ted Bundy.",
+     "3. Charles Manson.",
+     "4. Sweeney Todd."
    ]
 },
 
