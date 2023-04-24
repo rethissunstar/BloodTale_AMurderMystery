@@ -250,6 +250,9 @@ function showMobile() {
 
     if (d == 2) {
         messagesd = messages2;
+        next_btn_Mobile.onclick = () => {
+            window.open("../PUZZLE-3/index.html");
+        }
     }
 
     if (d == 3) {
