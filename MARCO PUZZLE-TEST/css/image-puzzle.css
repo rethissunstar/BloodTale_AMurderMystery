@@ -5,7 +5,7 @@
 }
 
 #collage #playPanel {
-    background-color:#c2defc;
+    background-color:#989898;
     padding:10px 0px;
     margin: 10px auto;
     max-width:800px;
@@ -26,7 +26,7 @@
 }
 
 #collage #stepBox div {
-    background-color:#c2defc;
+    background-color:#989898;
     display:inline-block;
     padding:1px 4px;
     margin: 0px auto;
@@ -34,13 +34,13 @@
 }
 
 #collage img#actualImage{
-    border:2px solid #a46;
+    border:2px solid rgb(255, 0, 0);
     height:280px;
     width:280px;
 }
 
 #collage #sortable {
-    border:2px solid #a46;
+    border:2px solid rgb(255, 0, 0);
     list-style-type: none;
     display: inline-block;
     margin: 10px;
