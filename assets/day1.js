@@ -234,8 +234,8 @@ next_btn_Quiz.onclick = () => {
 
 
 var messages1 = ['Hi, I committed murders in the 70s, when Gerald Ford and Jimmy Carter used to be the president.', 'I was often regarded as charismatic.', ' Used to love bringing victims in my car.', ' Guess who I am otherwise I will kill you', "Do you know who I am?",];
-var messages2 = ['Hi, people lost he number of muderes that I committed', 'My first murderer was a student from the University of Washington ', 'I used to spend the night with the dead bodies most of the time', "Do you know who I am?",];
-var messages3 = ['Hi, I attended law school in Utah.', 'Most of my crimes were commited on a classic 1968 Volkswagen Beetle.', 'The vehicle nowadays is on display at a museum. ', "Who am I?",];
+var messages2 = ['Hi, people lost the number of murders that I committed', 'My first murder was a student from the University of Washington ', 'I used to spend the night with the dead bodies most of the time', "Do you know who I am?",];
+var messages3 = ['Hi, I attended law school in Utah.', 'Most of my crimes were commited using a classic 1968 Volkswagen Beetle.', 'The vehicle nowadays is on display at a museum. ', "Who am I?",];
 var messagesd = [];
 
 
