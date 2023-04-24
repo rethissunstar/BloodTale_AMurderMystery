@@ -35,6 +35,7 @@ function adayTest() {
             let demo3 = dayAnswers;
             document.getElementById("demo1").innerHTML = demo1;
             document.getElementById("demo2").innerHTML = demo2;
+            clear_btn_Warning.classList.add("show"); 
             
 
         } else if (lDStoraged == today) {

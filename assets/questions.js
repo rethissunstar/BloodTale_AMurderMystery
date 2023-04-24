@@ -25,13 +25,13 @@ let questions = [
 },
    {
    numb: 3,
-   question: "Question third day.",
-   answer: "3. Third answer.",
+   question: "Who am I?",
+   answer: "3. Ted Bundy.",
    options: [
-     "1. First answer.",
-     "2. Second answer.",
-     "3. Third answer.",
-     "4. Fourth answer."
+     "1. Jeffrey Dahmer.",
+     "2. John Gacy.",
+     "3. Ted Bundy.",
+     "4. Robert Hansen."
    ]
 },
 
