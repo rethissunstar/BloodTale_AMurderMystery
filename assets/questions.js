@@ -14,13 +14,13 @@ let questions = [
 },
    {
    numb: 2,
-   question: "Question second day.",
-   answer: "2. Second answer.",
+   question: "Where did I was arrested?",
+   answer: "2. Utah.",
    options: [
-     "1. First answer.",
-     "2. Second answer.",
-     "3. Third answer.",
-     "4. Fourth answer."
+     "1. Chicago.",
+     "2. Utah.",
+     "3. New York",
+     "4. Milwaukee."
    ]
 },
    {
