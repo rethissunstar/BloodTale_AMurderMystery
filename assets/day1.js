@@ -7,7 +7,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 let dayAnswers = [];
-const today = "04/24/2023";
+const today = "04/25/2023";
 let qAnswer = "";
 let dALenght = 0;
 let lDStoraged = "";
@@ -178,7 +178,7 @@ function startTimer(time) {
             localStorage.setItem("dAnsFile", JSON.stringify(dayAnswers));
             timeText.textContent = "Time Off"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
-            let correcAns = questions[que_count].answer; //getting correct answer from array
+            let correcAns = questions[d-1].answer; //getting correct answer from array
             for (i = 0; i < allOptions; i++) {
                 if (option_list.children[i].textContent == correcAns) { //if there is an option which is matched to an array answer
                     option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
