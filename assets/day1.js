@@ -244,7 +244,7 @@ function showMobile() {
     if (d == 1) {
         messagesd = messages1;
         next_btn_Mobile.onclick = () => {
-            window.open("../MARCO PUZZLE-TEST/index.html");
+            window.location.replace("../MARCO PUZZLE-TEST/index.html");
         }
     }
 
