@@ -1,6 +1,8 @@
 ﻿body {
-    font-family: 'Segoe UI', Calibri, Arial;
+    font-family: 'Rubik Wet Paint', cursive;
+    color: #8b0000;
     margin:0;
+    background-color: black;
 }
 h2{
     font-weight:normal;
