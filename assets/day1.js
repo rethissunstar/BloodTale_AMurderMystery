@@ -7,7 +7,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 let dayAnswers = [];
-const today = "04/25/2023";
+const today = "04/23/2023";
 let qAnswer = "";
 let dALenght = 0;
 let lDStoraged = "";
@@ -35,9 +35,8 @@ function adayTest() {
             let demo3 = dayAnswers;
             document.getElementById("demo1").innerHTML = demo1;
             document.getElementById("demo2").innerHTML = demo2;
-            document.getElementById("demo3").innerHTML = demo3;
-            exit_btn_Warning.classList.add("show"); //show exit button box
-            clear_btn_Warning.classList.add("show"); //show exit button box
+            
+
         } else if (lDStoraged == today) {
             warning_box.classList.add("activeWarning"); //show warning box
             let demo1 = "You've had your chance today.";
@@ -45,8 +44,8 @@ function adayTest() {
             let demo3 = dayAnswers;
             document.getElementById("demo1").innerHTML = demo1;
             document.getElementById("demo2").innerHTML = demo2;
-            document.getElementById("demo3").innerHTML = demo3;
-            exit_btn_Warning.classList.add("show"); //show exit button box
+         
+            
         } else {
             d = (dALenght / 2) + 1
             quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -78,7 +77,7 @@ exit_btn_Warning.onclick = () => {
 
 clear_btn_Warning.onclick = () => {
     localStorage.removeItem("dAnsFile");
-    self.close();
+    window.location.assign("../index.html")
 }
 
 
@@ -215,8 +214,21 @@ function queCounter(index) {
 // if Next Que button clicked
 next_btn_Quiz.onclick = () => {
     clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    showMobile(); //calling showResult function
+    clearInterval(counterLine); //clear counterLine    
+    if (d==3){ 
+        quiz_box.classList.remove("activeQuiz"); //show warning box      
+        warning_box.classList.add("activeWarning");
+        let demo1 = "You've had your chance for three days.";
+        let demo2 = "Thank you for participating in the Bloody Tale game.";
+        let demo3 = dayAnswers;
+        document.getElementById("demo1").innerHTML = demo1;
+        document.getElementById("demo2").innerHTML = demo2;        
+        clear_btn_Warning.classList.add("show"); //show exit button box
+
+    }else{
+        showMobile(); //calling showResult function
+    }
+    
 }
 
 
@@ -265,6 +277,6 @@ next_btn_Mobile.onclick = () => {
     let demo3 = dayAnswers;
     document.getElementById("demo1").innerHTML = demo1;
     document.getElementById("demo2").innerHTML = demo2;
-    document.getElementById("demo3").innerHTML = demo3;
-    exit_btn_Warning.classList.add("show"); //show exit button box
+   
+    
 }
