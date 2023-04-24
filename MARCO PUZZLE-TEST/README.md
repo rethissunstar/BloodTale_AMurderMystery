@@ -1,3 +1,7 @@
-# image-puzzle-js
-Image Puzzle game in pure JavaScript.
-Detailed description and documentation available at: https://www.codeproject.com/Articles/810978/Image-Puzzle-A-Html-Game
+# Marco Saverino Puzzle 1
+
+## BloodTale_AMurderMystery
+The first puzzle of our game that would normally lead into day 2. For now and the purpose of the presentation we are only showing day
+
+## Contributors
+Marco Saverino, 
