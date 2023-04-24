@@ -64,7 +64,7 @@ var Hangman = (function () {
             }
         } else if (this.WORD.indexOf(this.getGuessedfWord()) !== -1) {
             // Victory condition
-            this.showElementByIdWithContent(this.elId + "_end", "Well done you surpised me here.<br/>Plenty of my victims were lucky to see my Volkswagen Beetle...<br/>Maybe you will be next?" );
+            this.showElementByIdWithContent(this.elId + "_end", "Well done you surpised me here.<br/>Plenty of my victims were lucky to see my Volkswagen Beetle...<br/>link.Maybe you will be next?" );
             this.STOPPED = true;
         }
     };

@@ -7,7 +7,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 let dayAnswers = [];
-const today = "04/25/2023";
+const today = "04/23/2023";
 let qAnswer = "";
 let dALenght = 0;
 let lDStoraged = "";
@@ -250,9 +250,6 @@ function showMobile() {
 
     if (d == 2) {
         messagesd = messages2;
-        next_btn_Mobile.onclick = () => {
-            window.open("../PUZZLE-3/index.html");
-        }
     }
 
     if (d == 3) {
