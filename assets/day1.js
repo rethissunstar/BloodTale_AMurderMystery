@@ -7,7 +7,7 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 let dayAnswers = [];
-const today = "04/24/2023";
+const today = new Date().toLocaleDateString();
 let qAnswer = "";
 let dALenght = 0;
 let lDStoraged = "";
@@ -158,6 +158,7 @@ function optionSelected(answer) {
 
     dayAnswers.push(today,qAnswer);
     localStorage.setItem("dAnsFile", JSON.stringify(dayAnswers));
+    console.log(dayAnswers);
     next_btn_Quiz.classList.add("show"); //show the next button if user selected any option
 }
 
