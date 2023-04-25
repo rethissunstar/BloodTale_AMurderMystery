@@ -15,6 +15,17 @@ I WANT  to learn about true crime stories
 IN A fun environment
 
 ```
+## Collaboration
+https://github.com/renansm93
+https://github.com/MarcoSaverino
+https://github.com/MVROZAY
+https://github.com/rethissunstar
+
+
+## How to Install
+please click the pic or vist the alternate
+alternaively: https://rethissunstar.github.io/BloodTale_AMurderMystery/
+
 ## Live URL
 
 <img src="assets/127.0.0.1_5501_index.html.png" widht=300 height=700 alt="Screenshot of the website">
@@ -32,3 +43,5 @@ Fonts from Google Font's API
 https://pixabay.com/music/suspense-dark-mystery-trailer-taking-our-time-131566/
 
 https://github.com/rethissunstar/BloodTale_AMurderMystery
+
+## Done under the MIT license
