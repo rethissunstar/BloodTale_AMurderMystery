@@ -29,8 +29,6 @@ https://github.com/rethissunstar
 
 Fonts from Google Font's API
 
-https://github.com/renansm93/BloodTale_AMurderMystery
-
 https://pixabay.com/music/suspense-dark-mystery-trailer-taking-our-time-131566/
 
 https://github.com/rethissunstar/BloodTale_AMurderMystery
